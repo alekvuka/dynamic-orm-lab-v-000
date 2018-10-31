@@ -61,7 +61,7 @@ class InteractiveRecord
 
     binding.pry
 
-    sql = "SELECT * FROM #{self.table_name} WHERE hash.keys[0].to_s = '#{hash[hash.keys[0].to_s]}'"
+    sql = "SELECT * FROM #{self.table_name} WHERE hash.keys[0].to_s = '#{hash[hash.keys[0]]}'"
     DB[:conn].execute(sql)
 
   end
