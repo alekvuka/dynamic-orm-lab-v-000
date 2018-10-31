@@ -60,10 +60,7 @@ class InteractiveRecord
   def self.find_by(hash)
     binding.pry
 
-    arr = Array.new
-    hash.each {|find_by, value|  }
-
-    sql = "SELECT * FROM #{self.table_name} WHERE name = '#{name}'"
+    sql = "SELECT * FROM #{self.hash.keys} WHERE name = '#{name}'"
     DB[:conn].execute(sql)
   end
 
